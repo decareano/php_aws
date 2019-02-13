@@ -1,0 +1,41 @@
+366:6ba326d739d2fb8b40e4765c4d6b38842db36792
+0
+1
+installed:370:fd35f444c4dce41097f88ea6651c8f90521bde65
+4
+mbr: perl-Git,noarch,0,1.8.3.1,20.el7 70
+  repo: updates
+  ts_state: u
+  output_state: 20
+  isDep: True
+  reason: dep
+  reinstall: False
+  relatedto: git,x86_64,0,1.8.3.1,20.el7@a:dependson
+  depends_on: git,x86_64,0,1.8.3.1,20.el7@a
+mbr: perl-Error,noarch,1,0.17020,2.el7 70
+  repo: base
+  ts_state: u
+  output_state: 20
+  isDep: True
+  reason: dep
+  reinstall: False
+  relatedto: git,x86_64,0,1.8.3.1,20.el7@a:dependson perl-Git,noarch,0,1.8.3.1,20.el7@a:dependson
+  depends_on: git,x86_64,0,1.8.3.1,20.el7@a perl-Git,noarch,0,1.8.3.1,20.el7@a
+mbr: git,x86_64,0,1.8.3.1,20.el7 70
+  repo: updates
+  ts_state: u
+  output_state: 20
+  isDep: False
+  reason: user
+  reinstall: False
+  relatedto: perl-Git,noarch,0,1.8.3.1,20.el7@a:dependson
+  depends_on: perl-Git,noarch,0,1.8.3.1,20.el7@a
+mbr: perl-TermReadKey,x86_64,0,2.30,20.el7 70
+  repo: base
+  ts_state: u
+  output_state: 20
+  isDep: True
+  reason: dep
+  reinstall: False
+  relatedto: git,x86_64,0,1.8.3.1,20.el7@a:dependson
+  depends_on: git,x86_64,0,1.8.3.1,20.el7@a

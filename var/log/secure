@@ -1,0 +1,84 @@
+Feb 12 23:17:23 ip-172-31-84-133 polkitd[2284]: Loading rules from directory /etc/polkit-1/rules.d
+Feb 12 23:17:23 ip-172-31-84-133 polkitd[2284]: Loading rules from directory /usr/share/polkit-1/rules.d
+Feb 12 23:17:23 ip-172-31-84-133 polkitd[2284]: Finished loading, compiling and executing 2 rules
+Feb 12 23:17:23 ip-172-31-84-133 polkitd[2284]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+Feb 12 23:18:19 ip-172-31-84-133 useradd[3957]: new group: name=centos, GID=1000
+Feb 12 23:18:19 ip-172-31-84-133 useradd[3957]: new user: name=centos, UID=1000, GID=1000, home=/home/centos, shell=/bin/bash
+Feb 12 23:18:19 ip-172-31-84-133 useradd[3957]: add 'centos' to group 'adm'
+Feb 12 23:18:19 ip-172-31-84-133 useradd[3957]: add 'centos' to group 'wheel'
+Feb 12 23:18:19 ip-172-31-84-133 useradd[3957]: add 'centos' to group 'systemd-journal'
+Feb 12 23:18:19 ip-172-31-84-133 useradd[3957]: add 'centos' to shadow group 'adm'
+Feb 12 23:18:19 ip-172-31-84-133 useradd[3957]: add 'centos' to shadow group 'wheel'
+Feb 12 23:18:19 ip-172-31-84-133 useradd[3957]: add 'centos' to shadow group 'systemd-journal'
+Feb 12 23:18:20 ip-172-31-84-133 sshd[4011]: Server listening on 0.0.0.0 port 22.
+Feb 12 23:18:20 ip-172-31-84-133 sshd[4011]: Server listening on :: port 22.
+Feb 12 23:18:20 ip-172-31-84-133 sshd[4011]: Received signal 15; terminating.
+Feb 12 23:18:20 ip-172-31-84-133 sshd[4022]: Server listening on 0.0.0.0 port 22.
+Feb 12 23:18:20 ip-172-31-84-133 sshd[4022]: Server listening on :: port 22.
+Feb 12 23:25:16 ip-172-31-84-133 sshd[4050]: Connection closed by 66.236.182.202 port 55130 [preauth]
+Feb 12 23:25:40 ip-172-31-84-133 sshd[4052]: Accepted publickey for centos from 66.236.182.202 port 63317 ssh2: RSA SHA256:j3NKdqcJxtxRivD4VjkW7QC/e5Zv9vHnblT5xy1KyD0
+Feb 12 23:25:40 ip-172-31-84-133 sshd[4052]: pam_unix(sshd:session): session opened for user centos by (uid=0)
+Feb 12 23:26:12 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/su
+Feb 12 23:26:12 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 12 23:26:12 ip-172-31-84-133 su: pam_unix(su:session): session opened for user root by centos(uid=0)
+Feb 12 23:31:27 ip-172-31-84-133 groupadd[17659]: group added to /etc/group: name=apache, GID=48
+Feb 12 23:31:27 ip-172-31-84-133 groupadd[17659]: group added to /etc/gshadow: name=apache
+Feb 12 23:31:27 ip-172-31-84-133 groupadd[17659]: new group: name=apache, GID=48
+Feb 12 23:31:27 ip-172-31-84-133 useradd[17663]: new user: name=apache, UID=48, GID=48, home=/usr/share/httpd, shell=/sbin/nologin
+Feb 12 23:31:48 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:17691:87153 (system bus name :1.21 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 12 23:31:49 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:17691:87153 (system bus name :1.21, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 12 23:32:01 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:17703:88425 (system bus name :1.22 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 12 23:32:02 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:17703:88425 (system bus name :1.22, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 12 23:33:52 ip-172-31-84-133 groupadd[17746]: group added to /etc/group: name=mysql, GID=27
+Feb 12 23:33:52 ip-172-31-84-133 groupadd[17746]: group added to /etc/gshadow: name=mysql
+Feb 12 23:33:52 ip-172-31-84-133 groupadd[17746]: new group: name=mysql, GID=27
+Feb 12 23:33:52 ip-172-31-84-133 useradd[17750]: new user: name=mysql, UID=27, GID=27, home=/var/lib/mysql, shell=/sbin/nologin
+Feb 12 23:34:30 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:17774:103382 (system bus name :1.23 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 12 23:34:38 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:17774:103382 (system bus name :1.23, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 12 23:34:48 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:18061:105182 (system bus name :1.26 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 12 23:34:49 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:18061:105182 (system bus name :1.26, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 12 23:50:16 ip-172-31-84-133 sshd[18163]: Accepted publickey for centos from 66.236.182.202 port 55345 ssh2: RSA SHA256:j3NKdqcJxtxRivD4VjkW7QC/e5Zv9vHnblT5xy1KyD0
+Feb 12 23:50:16 ip-172-31-84-133 sshd[18163]: pam_unix(sshd:session): session opened for user centos by (uid=0)
+Feb 12 23:51:17 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:18184:204040 (system bus name :1.29 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 12 23:51:18 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:18184:204040 (system bus name :1.29, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 12 23:51:25 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:18195:204842 (system bus name :1.30 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 12 23:51:25 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:18195:204842 (system bus name :1.30, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 13 00:01:42 ip-172-31-84-133 su: pam_unix(su:session): session closed for user root
+Feb 13 00:01:42 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:03:05 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/var/www/html/phpBB3 ; USER=root ; COMMAND=/bin/rm -rf install
+Feb 13 00:03:05 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:03:05 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:05:04 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/systemctl stop httpd
+Feb 13 00:05:04 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:05:04 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:18256:286774 (system bus name :1.35 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 13 00:05:05 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:05:05 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:18256:286774 (system bus name :1.35, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 13 00:05:15 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/systemctl start httpd
+Feb 13 00:05:15 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:05:15 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:18268:287905 (system bus name :1.37 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 13 00:05:16 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:05:16 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:18268:287905 (system bus name :1.37, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 13 00:08:10 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/var/www/html ; USER=root ; COMMAND=/sbin/setenforce 1
+Feb 13 00:08:10 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:08:10 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:08:25 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/systemctl stop httpd
+Feb 13 00:08:25 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:08:25 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:18307:306887 (system bus name :1.40 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 13 00:08:26 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:08:26 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:18307:306887 (system bus name :1.40, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 13 00:08:39 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/var/www/html ; USER=root ; COMMAND=/bin/systemctl start httpd
+Feb 13 00:08:39 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:08:39 ip-172-31-84-133 polkitd[2284]: Registered Authentication Agent for unix-process:18319:308274 (system bus name :1.42 [/usr/bin/pkttyagent --notify-fd 5 --fallback], object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
+Feb 13 00:08:39 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:08:39 ip-172-31-84-133 polkitd[2284]: Unregistered Authentication Agent for unix-process:18319:308274 (system bus name :1.42, object path /org/freedesktop/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8) (disconnected from bus)
+Feb 13 00:31:05 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/home/centos ; USER=root ; COMMAND=/bin/yum install git
+Feb 13 00:31:05 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:31:10 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:33:27 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/ ; USER=root ; COMMAND=/bin/git init .
+Feb 13 00:33:27 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:33:27 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:34:12 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/ ; USER=root ; COMMAND=/bin/git add .
+Feb 13 00:34:12 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)
+Feb 13 00:34:23 ip-172-31-84-133 sudo: pam_unix(sudo:session): session closed for user root
+Feb 13 00:35:12 ip-172-31-84-133 sudo:  centos : TTY=pts/0 ; PWD=/ ; USER=root ; COMMAND=/bin/git add etc/ var/
+Feb 13 00:35:12 ip-172-31-84-133 sudo: pam_unix(sudo:session): session opened for user root by centos(uid=0)

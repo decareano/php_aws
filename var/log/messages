@@ -1,0 +1,965 @@
+Feb 12 23:17:18 ip-172-31-84-133 journal: Runtime journal is using 6.1M (max allowed 49.4M, trying to leave 74.2M free of 488.5M available → current limit 49.4M).
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys cpuset
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys cpu
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys cpuacct
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Linux version 3.10.0-957.1.3.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) ) #1 SMP Thu Nov 29 14:49:43 UTC 2018
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-3.10.0-957.1.3.el7.x86_64 root=UUID=f41e390f-835b-4223-a9bb-9b45984ddf8d ro console=tty0 console=ttyS0,115200n8 crashkernel=auto console=ttyS0,115200 LANG=en_US.UTF-8
+Feb 12 23:17:18 ip-172-31-84-133 kernel: e820: BIOS-provided physical RAM map:
+Feb 12 23:17:18 ip-172-31-84-133 kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009dfff] usable
+Feb 12 23:17:18 ip-172-31-84-133 kernel: BIOS-e820: [mem 0x000000000009e000-0x000000000009ffff] reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: BIOS-e820: [mem 0x00000000000e0000-0x00000000000fffff] reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: BIOS-e820: [mem 0x0000000000100000-0x000000003fffffff] usable
+Feb 12 23:17:18 ip-172-31-84-133 kernel: BIOS-e820: [mem 0x00000000fc000000-0x00000000ffffffff] reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NX (Execute Disable) protection: active
+Feb 12 23:17:18 ip-172-31-84-133 kernel: SMBIOS 2.7 present.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: DMI: Xen HVM domU, BIOS 4.2.amazon 08/24/2006
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Hypervisor detected: Xen HVM
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Xen version 4.2.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Netfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated NICs.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Blkfront and the Xen platform PCI driver have been compiled for this kernel: unplug emulated disks.#012You might have to change the root device#012from /dev/hd[a-d] to /dev/xvd[a-d]#012in your root= kernel command line option
+Feb 12 23:17:18 ip-172-31-84-133 kernel: e820: last_pfn = 0x40000 max_arch_pfn = 0x400000000
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PAT configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- UC  
+Feb 12 23:17:18 ip-172-31-84-133 kernel: found SMP MP-table at [mem 0x000fbc50-0x000fbc5f] mapped at [ffffffffff200c50]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RAMDISK: [mem 0x32c81000-0x35638fff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Early table checksum verification disabled
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: RSDP 00000000000ea020 00024 (v02    Xen)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: XSDT 00000000fc00e2a0 00054 (v01    Xen      HVM 00000000 HVML 00000000)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: FACP 00000000fc00df60 000F4 (v04    Xen      HVM 00000000 HVML 00000000)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: DSDT 00000000fc0021c0 0BD19 (v02    Xen      HVM 00000000 INTL 20090123)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: FACS 00000000fc002180 00040
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: APIC 00000000fc00e060 000D8 (v02    Xen      HVM 00000000 HVML 00000000)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: HPET 00000000fc00e1b0 00038 (v01    Xen      HVM 00000000 HVML 00000000)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: WAET 00000000fc00e1f0 00028 (v01    Xen      HVM 00000000 HVML 00000000)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: SSDT 00000000fc00e220 00031 (v02    Xen      HVM 00000000 INTL 20090123)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: SSDT 00000000fc00e260 00031 (v02    Xen      HVM 00000000 INTL 20090123)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: No NUMA configuration found
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Faking a node at [mem 0x0000000000000000-0x000000003fffffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NODE_DATA(0) allocated [mem 0x3ffd9000-0x3fffffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: crashkernel=auto resulted in zero bytes of reserved memory.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Zone ranges:
+Feb 12 23:17:18 ip-172-31-84-133 kernel:  DMA      [mem 0x00001000-0x00ffffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel:  DMA32    [mem 0x01000000-0xffffffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel:  Normal   empty
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Movable zone start for each node
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Early memory node ranges
+Feb 12 23:17:18 ip-172-31-84-133 kernel:  node   0: [mem 0x00001000-0x0009dfff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel:  node   0: [mem 0x00100000-0x3fffffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initmem setup node 0 [mem 0x00001000-0x3fffffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: PM-Timer IO Port: 0xb008
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x01] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x02] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x03] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x04] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x05] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x06] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x07] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x08] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x09] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x0a] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x0b] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x0c] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x0d] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: LAPIC (acpi_id[0x0e] lapic_id[0x00] disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: IOAPIC (id[0x01] address[0xfec00000] gsi_base[0])
+Feb 12 23:17:18 ip-172-31-84-133 kernel: IOAPIC[0]: apic_id 1, version 17, address 0xfec00000, GSI 0-47
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 5 global_irq 5 low level)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 10 global_irq 10 low level)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 11 global_irq 11 low level)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Using ACPI (MADT) for SMP configuration information
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: HPET id: 0x8086a201 base: 0xfed00000
+Feb 12 23:17:18 ip-172-31-84-133 kernel: smpboot: Allowing 15 CPUs, 14 hotplug CPUs
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PM: Registered nosave memory: [mem 0x0009e000-0x0009ffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PM: Registered nosave memory: [mem 0x000a0000-0x000dffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PM: Registered nosave memory: [mem 0x000e0000-0x000fffff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: e820: [mem 0x40000000-0xfbffffff] available for PCI devices
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Booting paravirtualized kernel on Xen HVM
+Feb 12 23:17:18 ip-172-31-84-133 kernel: setup_percpu: NR_CPUS:5120 nr_cpumask_bits:15 nr_cpu_ids:15 nr_node_ids:1
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PERCPU: Embedded 38 pages/cpu @ffff9297fe200000 s118784 r8192 d28672 u262144
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Built 1 zonelists in Node order, mobility grouping on.  Total pages: 257928
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Policy zone: DMA32
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Kernel command line: BOOT_IMAGE=/boot/vmlinuz-3.10.0-957.1.3.el7.x86_64 root=UUID=f41e390f-835b-4223-a9bb-9b45984ddf8d ro console=tty0 console=ttyS0,115200n8 crashkernel=auto console=ttyS0,115200 LANG=en_US.UTF-8
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PID hash table entries: 4096 (order: 3, 32768 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: x86/fpu: xstate_offset[2]: 0240, xstate_sizes[2]: 0100
+Feb 12 23:17:18 ip-172-31-84-133 kernel: xsave: enabled xstate_bv 0x7, cntxt size 0x340 using standard form
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Memory: 967484k/1048576k available (7664k kernel code, 396k absent, 80696k reserved, 6055k data, 1876k init)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=15, Nodes=1
+Feb 12 23:17:18 ip-172-31-84-133 kernel: x86/pti: Unmapping kernel while in userspace
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Hierarchical RCU implementation.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: #011RCU restricting CPUs from NR_CPUS=5120 to nr_cpu_ids=15.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NR_IRQS:327936 nr_irqs:952 0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: xen:events: Xen HVM callback vector for event delivery is enabled
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Console: colour VGA+ 80x25
+Feb 12 23:17:18 ip-172-31-84-133 kernel: console [tty0] enabled
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Cannot get hvm parameter CONSOLE_EVTCHN (18): -22!
+Feb 12 23:17:18 ip-172-31-84-133 kernel: console [ttyS0] enabled
+Feb 12 23:17:18 ip-172-31-84-133 kernel: allocated 4194304 bytes of page_cgroup
+Feb 12 23:17:18 ip-172-31-84-133 kernel: please try 'cgroup_disable=memory' option if you don't want memory cgroups
+Feb 12 23:17:18 ip-172-31-84-133 kernel: tsc: Fast TSC calibration using PIT
+Feb 12 23:17:18 ip-172-31-84-133 kernel: tsc: Detected 2400.113 MHz processor
+Feb 12 23:17:18 ip-172-31-84-133 kernel: tsc: Detected 2400.034 MHz TSC
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Calibrating delay loop (skipped), value calculated using timer frequency.. 
+Feb 12 23:17:18 ip-172-31-84-133 kernel: 4800.06 BogoMIPS (lpj=2400034)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pid_max: default: 32768 minimum: 301
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Security Framework initialized
+Feb 12 23:17:18 ip-172-31-84-133 kernel: SELinux:  Initializing.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Yama: becoming mindful.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys memory
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys devices
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys freezer
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys net_cls
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys blkio
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys perf_event
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys hugetlb
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys pids
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing cgroup subsys net_prio
+Feb 12 23:17:18 ip-172-31-84-133 kernel: mce: CPU supports 2 MCE banks
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: tlb_flushall_shift: 6
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Speculative Store Bypass: Vulnerable
+Feb 12 23:17:18 ip-172-31-84-133 kernel: FEATURE SPEC_CTRL Not Present
+Feb 12 23:17:18 ip-172-31-84-133 kernel: FEATURE IBPB_SUPPORT Not Present
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Spectre V2 : Vulnerable: Retpoline without IBPB
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Core revision 20130517
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: All ACPI Tables successfully acquired
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ftrace: allocating 29188 entries in 115 pages
+Feb 12 23:17:18 ip-172-31-84-133 kernel: random: fast init done
+Feb 12 23:17:18 ip-172-31-84-133 kernel: IRQ remapping doesn't support X2APIC mode, disable x2apic.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Switched APIC routing to physical flat.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=0 pin2=0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: smpboot: CPU0: Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz (fam: 06, model: 3f, stepping: 02)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: installing Xen timer for CPU 0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: cpu 0 spinlock event irq 53
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Performance Events: unsupported p6 CPU model 63 no PMU driver, software events only.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Brought up 1 CPUs
+Feb 12 23:17:18 ip-172-31-84-133 kernel: smpboot: Max logical packages: 15
+Feb 12 23:17:18 ip-172-31-84-133 kernel: smpboot: Total of 1 processors activated (4800.06 BogoMIPS)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NMI watchdog: disabled (cpu0): hardware events not enabled
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NMI watchdog: Shutting down hard lockup detector on all cpus
+Feb 12 23:17:18 ip-172-31-84-133 kernel: devtmpfs: initialized
+Feb 12 23:17:18 ip-172-31-84-133 kernel: EVM: security.selinux
+Feb 12 23:17:18 ip-172-31-84-133 kernel: EVM: security.ima
+Feb 12 23:17:18 ip-172-31-84-133 kernel: EVM: security.capability
+Feb 12 23:17:18 ip-172-31-84-133 kernel: atomic64 test passed for x86-64 platform with CX8 and with SSE
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pinctrl core: initialized pinctrl subsystem
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RTC time: 23:17:17, date: 02/12/19
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NET: Registered protocol family 16
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: bus type PCI registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PCI: Using configuration type 1 for base access
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Added _OSI(Module Device)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Added _OSI(Processor Device)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Added _OSI(Linux-Dell-Video)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Interpreter enabled
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: (supports S0 S3 S4 S5)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Using IOAPIC for interrupt routing
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Enabled 2 GPEs in block 00 to 0F
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [0] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [3] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [4] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [5] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [6] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [7] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [8] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [9] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [10] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [11] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [12] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [13] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [14] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [15] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [16] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [17] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [18] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [19] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [20] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [21] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [22] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [23] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [24] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [25] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [26] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [27] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [28] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [29] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [30] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpiphp: Slot [31] registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PCI host bridge to bus 0000:00
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci_bus 0000:00: root bus resource [mem 0xf0000000-0xfbffffff window]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: * Found PM-Timer Bug on the chipset. Due to workarounds for a bug,#012* this clock source is slow. Consider trying other clock sources
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci 0000:00:01.3: quirk: [io  0xb000-0xb03f] claimed by PIIX4 ACPI
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: PCI Interrupt Link [LNKA] (IRQs *5 10 11)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: PCI Interrupt Link [LNKB] (IRQs 5 *10 11)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: PCI Interrupt Link [LNKC] (IRQs 5 10 *11)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: PCI Interrupt Link [LNKD] (IRQs *5 10 11)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: xen:balloon: Initialising balloon driver
+Feb 12 23:17:18 ip-172-31-84-133 kernel: vgaarb: device added: PCI:0000:00:02.0,decodes=io+mem,owns=io+mem,locks=none
+Feb 12 23:17:18 ip-172-31-84-133 kernel: vgaarb: loaded
+Feb 12 23:17:18 ip-172-31-84-133 kernel: vgaarb: bridge control possible 0000:00:02.0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: SCSI subsystem initialized
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: bus type USB registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: usbcore: registered new interface driver usbfs
+Feb 12 23:17:18 ip-172-31-84-133 kernel: usbcore: registered new interface driver hub
+Feb 12 23:17:18 ip-172-31-84-133 kernel: usbcore: registered new device driver usb
+Feb 12 23:17:18 ip-172-31-84-133 kernel: EDAC MC: Ver: 3.0.0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: PCI: Using ACPI for IRQ routing
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NetLabel: Initializing
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NetLabel:  domain hash size = 128
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NetLabel:  protocols = UNLABELED CIPSOv4
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NetLabel:  unlabeled traffic allowed by default
+Feb 12 23:17:18 ip-172-31-84-133 kernel: HPET: 3 timers in total, 0 timers will be used for per-cpu timer
+Feb 12 23:17:18 ip-172-31-84-133 kernel: hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: hpet0: 3 comparators, 64-bit 62.500000 MHz counter
+Feb 12 23:17:18 ip-172-31-84-133 kernel: amd_nb: Cannot enumerate AMD northbridges
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Switched to clocksource xen
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pnp: PnP ACPI init
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: bus type PNP registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: system 00:00: [mem 0x00000000-0x0009ffff] could not be reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: system 00:01: [io  0x08a0-0x08a3] has been reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: system 00:01: [io  0x0cc0-0x0ccf] has been reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: system 00:01: [io  0x04d0-0x04d1] has been reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: system 00:07: [io  0x10c0-0x1141] has been reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: system 00:07: [io  0xb044-0xb047] has been reserved
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pnp: PnP ACPI: found 8 devices
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: bus type PNP unregistered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NET: Registered protocol family 2
+Feb 12 23:17:18 ip-172-31-84-133 kernel: TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: TCP: Hash tables configured (established 8192 bind 8192)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: TCP: reno registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: UDP hash table entries: 512 (order: 2, 16384 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NET: Registered protocol family 1
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci 0000:00:01.0: PIIX3: Enabling Passive Release
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Unpacking initramfs...
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Freeing initrd memory: 42720k freed
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RAPL PMU: API unit is 2^-32 Joules, 3 fixed counters, 655360 ms ovfl timer
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RAPL PMU: hw unit of domain pp0-core 2^-14 Joules
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RAPL PMU: hw unit of domain package 2^-14 Joules
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RAPL PMU: hw unit of domain dram 2^-16 Joules
+Feb 12 23:17:18 ip-172-31-84-133 kernel: sha1_ssse3: Using AVX2 optimized SHA-1 implementation
+Feb 12 23:17:18 ip-172-31-84-133 kernel: sha256_ssse3: Using AVX2 optimized SHA-256 implementation
+Feb 12 23:17:18 ip-172-31-84-133 kernel: futex hash table entries: 4096 (order: 6, 262144 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initialise system trusted keyring
+Feb 12 23:17:18 ip-172-31-84-133 kernel: audit: initializing netlink socket (disabled)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: type=2000 audit(1550013437.902:1): initialized
+Feb 12 23:17:18 ip-172-31-84-133 kernel: HugeTLB registered 2 MB page size, pre-allocated 0 pages
+Feb 12 23:17:18 ip-172-31-84-133 kernel: zpool: loaded
+Feb 12 23:17:18 ip-172-31-84-133 kernel: zbud: loaded
+Feb 12 23:17:18 ip-172-31-84-133 kernel: VFS: Disk quotas dquot_6.5.2
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: msgmni has been set to 1973
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Key type big_key registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NET: Registered protocol family 38
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Key type asymmetric registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Asymmetric key parser 'x509' registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: io scheduler noop registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: io scheduler deadline registered (default)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: io scheduler cfq registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: io scheduler mq-deadline registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: io scheduler kyber registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pci_hotplug: PCI Hot Plug PCI Core version: 0.5
+Feb 12 23:17:18 ip-172-31-84-133 kernel: pciehp: PCI Express Hot Plug Controller Driver version: 0.4
+Feb 12 23:17:18 ip-172-31-84-133 kernel: shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+Feb 12 23:17:18 ip-172-31-84-133 kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Power Button [PWRF]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ACPI: Sleep Button [SLPF]
+Feb 12 23:17:18 ip-172-31-84-133 kernel: GHES: HEST is not enabled!
+Feb 12 23:17:18 ip-172-31-84-133 kernel: xen:grant_table: Grant tables using version 1 layout
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Grant table initialized
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Cannot get hvm parameter CONSOLE_EVTCHN (18): -22!
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Feb 12 23:17:18 ip-172-31-84-133 kernel: 00:06: ttyS0 at I/O 0x3f8 (irq = 4) is a 16550A
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Non-volatile memory driver v1.3
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Linux agpgart interface v0.103
+Feb 12 23:17:18 ip-172-31-84-133 kernel: crash memory driver: version 1.1
+Feb 12 23:17:18 ip-172-31-84-133 kernel: rdac: device handler registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: hp_sw: device handler registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: emc: device handler registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: alua: device handler registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: libphy: Fixed MDIO Bus: probed
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ehci-pci: EHCI PCI platform driver
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Feb 12 23:17:18 ip-172-31-84-133 kernel: ohci-pci: OHCI PCI platform driver
+Feb 12 23:17:18 ip-172-31-84-133 kernel: uhci_hcd: USB Universal Host Controller Interface driver
+Feb 12 23:17:18 ip-172-31-84-133 kernel: usbcore: registered new interface driver usbserial_generic
+Feb 12 23:17:18 ip-172-31-84-133 kernel: usbserial: USB Serial support registered for generic
+Feb 12 23:17:18 ip-172-31-84-133 kernel: i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f13:PS2M] at 0x60,0x64 irq 1,12
+Feb 12 23:17:18 ip-172-31-84-133 kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Feb 12 23:17:18 ip-172-31-84-133 kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Feb 12 23:17:18 ip-172-31-84-133 kernel: mousedev: PS/2 mouse device common for all mice
+Feb 12 23:17:18 ip-172-31-84-133 kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input2
+Feb 12 23:17:18 ip-172-31-84-133 kernel: rtc_cmos 00:02: rtc core: registered rtc_cmos as rtc0
+Feb 12 23:17:18 ip-172-31-84-133 kernel: rtc_cmos 00:02: alarms up to one day, 114 bytes nvram, hpet irqs
+Feb 12 23:17:18 ip-172-31-84-133 kernel: cpuidle: using governor menu
+Feb 12 23:17:18 ip-172-31-84-133 kernel: hidraw: raw HID events driver (C) Jiri Kosina
+Feb 12 23:17:18 ip-172-31-84-133 kernel: usbcore: registered new interface driver usbhid
+Feb 12 23:17:18 ip-172-31-84-133 kernel: usbhid: USB HID core driver
+Feb 12 23:17:18 ip-172-31-84-133 kernel: drop_monitor: Initializing network drop monitor service
+Feb 12 23:17:18 ip-172-31-84-133 kernel: TCP: cubic registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Initializing XFRM netlink socket
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NET: Registered protocol family 10
+Feb 12 23:17:18 ip-172-31-84-133 kernel: NET: Registered protocol family 17
+Feb 12 23:17:18 ip-172-31-84-133 kernel: mpls_gso: MPLS GSO support
+Feb 12 23:17:18 ip-172-31-84-133 kernel: intel_rdt: Intel RDT L3 allocation detected
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Loading compiled-in X.509 certificates
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Loaded X.509 cert 'CentOS Linux kpatch signing key: ea0413152cde1d98ebdca3fe6f0230904c9ef717'
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Loaded X.509 cert 'CentOS Linux Driver update signing key: 7f421ee0ab69461574bb358861dbe77762a4201b'
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Loaded X.509 cert 'CentOS Linux kernel signing key: e7cef3613a9b8bd012fae7498272159bb1879c65'
+Feb 12 23:17:18 ip-172-31-84-133 kernel: registered taskstats version 1
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Key type trusted registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Key type encrypted registered
+Feb 12 23:17:18 ip-172-31-84-133 kernel: IMA: No TPM chip found, activating TPM-bypass! (rc=-19)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: xenbus_probe_frontend: Device with no driver: device/vbd/768
+Feb 12 23:17:18 ip-172-31-84-133 kernel: xenbus_probe_frontend: Device with no driver: device/vif/0
+Feb 12 23:17:18 ip-172-31-84-133 kernel:  Magic number: 7:38:302
+Feb 12 23:17:18 ip-172-31-84-133 kernel: tty tty31: hash matches
+Feb 12 23:17:18 ip-172-31-84-133 kernel: acpi device:9c: hash matches
+Feb 12 23:17:18 ip-172-31-84-133 kernel: rtc_cmos 00:02: setting system clock to 2019-02-12 23:17:18 UTC (1550013438)
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Freeing unused kernel memory: 1876k freed
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Write protecting the kernel read-only data: 12288k
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Freeing unused kernel memory: 516k freed
+Feb 12 23:17:18 ip-172-31-84-133 kernel: Freeing unused kernel memory: 600k freed
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: systemd 219 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Detected virtualization xen.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Detected architecture x86-64.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Running in initial RAM disk.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: No hostname configured.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Set hostname to <localhost>.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Initializing machine ID from random generator.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Created slice Root Slice.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Listening on Journal Socket.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Reached target Timers.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Created slice System Slice.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Starting dracut cmdline hook...
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Starting Apply Kernel Variables...
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Starting Create list of required static device nodes for the current kernel...
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Starting Journal Service...
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Listening on udev Control Socket.
+Feb 12 23:17:18 ip-172-31-84-133 journal: Journal started
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Listening on udev Kernel Socket.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Reached target Swap.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Reached target Sockets.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Reached target Slices.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Reached target Paths.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Reached target Local File Systems.
+Feb 12 23:17:18 ip-172-31-84-133 systemd[1]: Started Journal Service.
+Feb 12 23:17:18 ip-172-31-84-133 systemd: Started Apply Kernel Variables.
+Feb 12 23:17:18 ip-172-31-84-133 systemd: Started Create list of required static device nodes for the current kernel.
+Feb 12 23:17:18 ip-172-31-84-133 systemd: Starting Create Static Device Nodes in /dev...
+Feb 12 23:17:18 ip-172-31-84-133 systemd: Started Create Static Device Nodes in /dev.
+Feb 12 23:17:18 ip-172-31-84-133 systemd: Started dracut cmdline hook.
+Feb 12 23:17:18 ip-172-31-84-133 systemd: Starting dracut pre-udev hook...
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RPC: Registered named UNIX socket transport module.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RPC: Registered udp transport module.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RPC: Registered tcp transport module.
+Feb 12 23:17:18 ip-172-31-84-133 kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Feb 12 23:17:18 ip-172-31-84-133 rpc.statd[188]: Version 1.3.0 starting
+Feb 12 23:17:18 ip-172-31-84-133 rpc.statd[188]: Initializing NSM state
+Feb 12 23:17:18 ip-172-31-84-133 rpc.statd[188]: Running as root.  chown /var/lib/nfs/statd to choose different user
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Started dracut pre-udev hook.
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Starting udev Kernel Device Manager...
+Feb 12 23:17:19 ip-172-31-84-133 kernel: tsc: Refined TSC clocksource calibration: 2400.000 MHz
+Feb 12 23:17:19 ip-172-31-84-133 systemd-udevd: starting version 219
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Started udev Kernel Device Manager.
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Starting dracut pre-trigger hook...
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Started dracut pre-trigger hook.
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Starting udev Coldplug all Devices...
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Started udev Coldplug all Devices.
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Reached target System Initialization.
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Reached target Basic System.
+Feb 12 23:17:19 ip-172-31-84-133 kernel: input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Starting dracut initqueue hook...
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Mounting Configuration File System...
+Feb 12 23:17:19 ip-172-31-84-133 systemd: Mounted Configuration File System.
+Feb 12 23:17:19 ip-172-31-84-133 kernel: scsi host0: ata_piix
+Feb 12 23:17:19 ip-172-31-84-133 kernel: scsi host1: ata_piix
+Feb 12 23:17:19 ip-172-31-84-133 kernel: ata1: PATA max MWDMA2 cmd 0x1f0 ctl 0x3f6 bmdma 0xc100 irq 14
+Feb 12 23:17:19 ip-172-31-84-133 kernel: ata2: PATA max MWDMA2 cmd 0x170 ctl 0x376 bmdma 0xc108 irq 15
+Feb 12 23:17:19 ip-172-31-84-133 kernel: FDC 0 is a S82078B
+Feb 12 23:17:20 ip-172-31-84-133 kernel: xen_netfront: Initialising Xen virtual ethernet driver
+Feb 12 23:17:20 ip-172-31-84-133 kernel: blkfront: xvda: barrier or flush: disabled; persistent grants: disabled; indirect descriptors: enabled;
+Feb 12 23:17:20 ip-172-31-84-133 kernel: xvda: xvda1
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Found device /dev/disk/by-uuid/f41e390f-835b-4223-a9bb-9b45984ddf8d.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Started dracut initqueue hook.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Reached target Remote File Systems (Pre).
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Reached target Remote File Systems.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Starting File System Check on /dev/disk/by-uuid/f41e390f-835b-4223-a9bb-9b45984ddf8d...
+Feb 12 23:17:20 ip-172-31-84-133 systemd-fsck: /sbin/fsck.xfs: XFS file system.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Started File System Check on /dev/disk/by-uuid/f41e390f-835b-4223-a9bb-9b45984ddf8d.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Mounting /sysroot...
+Feb 12 23:17:20 ip-172-31-84-133 kernel: SGI XFS with ACLs, security attributes, no debug enabled
+Feb 12 23:17:20 ip-172-31-84-133 kernel: XFS (xvda1): Mounting V5 Filesystem
+Feb 12 23:17:20 ip-172-31-84-133 kernel: XFS (xvda1): Ending clean mount
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Mounted /sysroot.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Reached target Initrd Root File System.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Starting Reload Configuration from the Real Root...
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Reloading.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Started Reload Configuration from the Real Root.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Reached target Initrd File Systems.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Reached target Initrd Default Target.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Starting dracut pre-pivot and cleanup hook...
+Feb 12 23:17:20 ip-172-31-84-133 rpcbind[184]: cannot open file = /run/rpcbind/rpcbind.xdr for writing
+Feb 12 23:17:20 ip-172-31-84-133 rpcbind[184]: cannot save any registration
+Feb 12 23:17:20 ip-172-31-84-133 rpcbind[184]: cannot open file = /run/rpcbind/portmap.xdr for writing
+Feb 12 23:17:20 ip-172-31-84-133 rpcbind[184]: cannot save any registration
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Started dracut pre-pivot and cleanup hook.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Starting Cleaning Up and Shutting Down Daemons...
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Timers.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped Cleaning Up and Shutting Down Daemons.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped dracut pre-pivot and cleanup hook.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Remote File Systems.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Remote File Systems (Pre).
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped dracut initqueue hook.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Initrd Default Target.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Basic System.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target System Initialization.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Swap.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Local File Systems.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped Apply Kernel Variables.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped udev Coldplug all Devices.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped dracut pre-trigger hook.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopping udev Kernel Device Manager...
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Slices.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Sockets.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped target Paths.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped Dispatch Password Requests to Console Directory Watch.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped udev Kernel Device Manager.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped dracut pre-udev hook.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped dracut cmdline hook.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped Create Static Device Nodes in /dev.
+Feb 12 23:17:20 ip-172-31-84-133 systemd: Stopped Create list of required static device nodes for the current kernel.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Closed udev Kernel Socket.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Closed udev Control Socket.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Cleanup udevd DB...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Cleanup udevd DB.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Reached target Switch Root.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Switch Root...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Switching root.
+Feb 12 23:17:21 ip-172-31-84-133 journal: Journal stopped
+Feb 12 23:17:21 ip-172-31-84-133 journal: Runtime journal is using 6.1M (max allowed 49.4M, trying to leave 74.2M free of 482.3M available → current limit 49.4M).
+Feb 12 23:17:21 ip-172-31-84-133 systemd-journald[109]: Received SIGTERM from PID 1 (systemd).
+Feb 12 23:17:21 ip-172-31-84-133 kernel: type=1404 audit(1550013441.088:2): enforcing=1 old_enforcing=0 auid=4294967295 ses=4294967295
+Feb 12 23:17:21 ip-172-31-84-133 kernel: SELinux:  Class bpf not defined in policy.
+Feb 12 23:17:21 ip-172-31-84-133 kernel: SELinux: the above unknown classes and permissions will be allowed
+Feb 12 23:17:21 ip-172-31-84-133 kernel: type=1403 audit(1550013441.205:3): policy loaded auid=4294967295 ses=4294967295
+Feb 12 23:17:21 ip-172-31-84-133 systemd[1]: Successfully loaded SELinux policy in 147.967ms.
+Feb 12 23:17:21 ip-172-31-84-133 kernel: ip_tables: (C) 2000-2006 Netfilter Core Team
+Feb 12 23:17:21 ip-172-31-84-133 systemd[1]: Inserted module 'ip_tables'
+Feb 12 23:17:21 ip-172-31-84-133 systemd[1]: Relabelled /dev, /run and /sys/fs/cgroup in 13.452ms.
+Feb 12 23:17:21 ip-172-31-84-133 journal: Journal started
+Feb 12 23:17:21 ip-172-31-84-133 systemd: systemd 219 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Detected virtualization xen.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Detected architecture x86-64.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Set hostname to <localhost.localdomain>.
+Feb 12 23:17:21 ip-172-31-84-133 kernel: random: crng init done
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Read and set NIS domainname from /etc/sysconfig/network.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Setup Virtual Console.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Remount Root and Kernel File Systems.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Apply Kernel Variables.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Create list of required static device nodes for the current kernel.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Create Static Device Nodes in /dev...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Configure read-only root support...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Rebuild Hardware Database...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Flush Journal to Persistent Storage...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Create Static Device Nodes in /dev.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Flush Journal to Persistent Storage.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting udev Kernel Device Manager...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Reached target Local File Systems (Pre).
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Started Configure read-only root support.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Load/Save Random Seed...
+Feb 12 23:17:21 ip-172-31-84-133 systemd-udevd: starting version 219
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Reached target Local File Systems.
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Import network configuration from initramfs...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Rebuild Journal Catalog...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Preprocess NFS configuration...
+Feb 12 23:17:21 ip-172-31-84-133 systemd: Starting Migrate local SELinux policy changes from the old store structure to the new structure...
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started udev Kernel Device Manager.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Load/Save Random Seed.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Rebuild Journal Catalog.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Import network configuration from initramfs.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Preprocess NFS configuration.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Migrate local SELinux policy changes from the old store structure to the new structure.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Starting Create Volatile Files and Directories...
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Create Volatile Files and Directories.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Starting Security Auditing Service...
+Feb 12 23:17:22 ip-172-31-84-133 auditd[1832]: Started dispatcher: /sbin/audispd pid: 1834
+Feb 12 23:17:22 ip-172-31-84-133 kernel: type=1305 audit(1550013442.203:4): audit_pid=1832 old=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:auditd_t:s0 res=1
+Feb 12 23:17:22 ip-172-31-84-133 audispd: No plugins found, exiting
+Feb 12 23:17:22 ip-172-31-84-133 auditd[1832]: Init complete, auditd 2.8.4 listening for events (startup state enable)
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: No rules
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: enabled 1
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: failure 1
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: pid 1832
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: rate_limit 0
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: backlog_limit 8192
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: lost 0
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: backlog 1
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: enabled 1
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: failure 1
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: pid 1832
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: rate_limit 0
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: backlog_limit 8192
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: lost 0
+Feb 12 23:17:22 ip-172-31-84-133 augenrules: backlog 1
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Security Auditing Service.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Starting Update UTMP about System Boot/Shutdown...
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Rebuild Hardware Database.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Update UTMP about System Boot/Shutdown.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Starting udev Coldplug all Devices...
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Starting Update is Completed...
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started Update is Completed.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Started udev Coldplug all Devices.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Reached target System Initialization.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Listening on RPCbind Server Activation Socket.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Starting RPC bind service...
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Listening on D-Bus System Message Bus Socket.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Reached target Sockets.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Reached target Basic System.
+Feb 12 23:17:22 ip-172-31-84-133 systemd: Starting Authorization Manager...
+Feb 12 23:17:22 ip-172-31-84-133 kernel: piix4_smbus 0000:00:01.3: SMBus base address uninitialized - upgrade BIOS or use force_addr=0xaddr
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Started D-Bus System Message Bus.
+Feb 12 23:17:23 ip-172-31-84-133 polkitd[2284]: Started polkitd version 0.112
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Starting NTP client/server...
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Started irqbalance daemon.
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Starting GSSAPI Proxy Daemon...
+Feb 12 23:17:23 ip-172-31-84-133 chronyd[2469]: chronyd version 3.2 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +SCFILTER +SECHASH +SIGND +ASYNCDNS +IPV6 +DEBUG)
+Feb 12 23:17:23 ip-172-31-84-133 /usr/sbin/irqbalance: Balancing is ineffective on systems with a single cpu.  Shutting down
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Starting Dump dmesg to /var/log/dmesg...
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Starting Initial cloud-init job (pre-networking)...
+Feb 12 23:17:23 ip-172-31-84-133 kernel: [TTM] Zone  kernel: Available graphics memory: 506598 kiB
+Feb 12 23:17:23 ip-172-31-84-133 kernel: [TTM] Initializing pool allocator
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Starting Login Service...
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Started Daily Cleanup of Temporary Directories.
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Reached target Timers.
+Feb 12 23:17:23 ip-172-31-84-133 kernel: [TTM] Initializing DMA pool allocator
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Started RPC bind service.
+Feb 12 23:17:23 ip-172-31-84-133 kernel: [drm] fb mappable at 0xF0000000
+Feb 12 23:17:23 ip-172-31-84-133 kernel: [drm] vram aper at 0xF0000000
+Feb 12 23:17:23 ip-172-31-84-133 kernel: [drm] size 33554432
+Feb 12 23:17:23 ip-172-31-84-133 kernel: [drm] fb depth is 24
+Feb 12 23:17:23 ip-172-31-84-133 kernel: [drm]    pitch is 3072
+Feb 12 23:17:23 ip-172-31-84-133 systemd: Started GSSAPI Proxy Daemon.
+Feb 12 23:17:24 ip-172-31-84-133 kernel: fbcon: cirrusdrmfb (fb0) is primary device
+Feb 12 23:17:24 ip-172-31-84-133 kernel: Console: switching to colour frame buffer device 128x48
+Feb 12 23:17:24 ip-172-31-84-133 kernel: cirrus 0000:00:02.0: fb0: cirrusdrmfb frame buffer device
+Feb 12 23:17:24 ip-172-31-84-133 systemd: Started Dump dmesg to /var/log/dmesg.
+Feb 12 23:17:24 ip-172-31-84-133 systemd: Started NTP client/server.
+Feb 12 23:17:24 ip-172-31-84-133 kernel: input: PC Speaker as /devices/platform/pcspkr/input/input4
+Feb 12 23:17:24 ip-172-31-84-133 kernel: [drm] Initialized cirrus 1.0.0 20110418 for 0000:00:02.0 on minor 0
+Feb 12 23:17:24 ip-172-31-84-133 systemd: Started Authorization Manager.
+Feb 12 23:17:24 ip-172-31-84-133 systemd: Found device /dev/ttyS0.
+Feb 12 23:17:24 ip-172-31-84-133 systemd-logind: Watching system buttons on /dev/input/event0 (Power Button)
+Feb 12 23:17:24 ip-172-31-84-133 systemd-logind: Watching system buttons on /dev/input/event1 (Sleep Button)
+Feb 12 23:17:24 ip-172-31-84-133 systemd-logind: New seat seat0.
+Feb 12 23:17:24 ip-172-31-84-133 systemd: Started Login Service.
+Feb 12 23:17:24 ip-172-31-84-133 systemd: Reached target NFS client services.
+Feb 12 23:17:24 ip-172-31-84-133 kernel: cryptd: max_cpu_qlen set to 1000
+Feb 12 23:17:24 ip-172-31-84-133 systemd: Reached target Remote File Systems (Pre).
+Feb 12 23:17:24 ip-172-31-84-133 systemd: Reached target Remote File Systems.
+Feb 12 23:17:24 ip-172-31-84-133 kernel: AVX2 version of gcm_enc/dec engaged.
+Feb 12 23:17:24 ip-172-31-84-133 kernel: AES CTR mode by8 optimization enabled
+Feb 12 23:17:24 ip-172-31-84-133 kernel: ppdev: user-space parallel port driver
+Feb 12 23:17:24 ip-172-31-84-133 kernel: alg: No test for __gcm-aes-aesni (__driver-gcm-aes-aesni)
+Feb 12 23:17:24 ip-172-31-84-133 kernel: alg: No test for __generic-gcm-aes-aesni (__driver-generic-gcm-aes-aesni)
+Feb 12 23:17:24 ip-172-31-84-133 kernel: intel_rapl: Found RAPL domain package
+Feb 12 23:17:24 ip-172-31-84-133 kernel: intel_rapl: Found RAPL domain dram
+Feb 12 23:17:24 ip-172-31-84-133 kernel: intel_rapl: DRAM domain energy unit 15300pj
+Feb 12 23:17:24 ip-172-31-84-133 kernel: EDAC sbridge:  Ver: 1.1.2 
+Feb 12 23:17:25 ip-172-31-84-133 cloud-init: Cloud-init v. 18.2 running 'init-local' at Tue, 12 Feb 2019 23:17:25 +0000. Up 8.32 seconds.
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: Internet Systems Consortium DHCP Client 4.2.5
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: Copyright 2004-2013 Internet Systems Consortium.
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: All rights reserved.
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: For info, please visit https://www.isc.org/software/dhcp/
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: are/dhcp/
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: Listening on LPF/eth0/12:4d:02:3b:2f:5e
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: Sending on   LPF/eth0/12:4d:02:3b:2f:5e
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: Sending on   Socket/fallback
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 8 (xid=0x33dc1871)
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: DHCPREQUEST on eth0 to 255.255.255.255 port 67 (xid=0x33dc1871)
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: DHCPOFFER from 172.31.80.1
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: DHCPACK from 172.31.80.1 (xid=0x33dc1871)
+Feb 12 23:17:25 ip-172-31-84-133 dhclient[3539]: bound to 172.31.84.133 -- renewal in 1761 seconds.
+Feb 12 23:18:15 ip-172-31-84-133 dbus[2319]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service'
+Feb 12 23:18:15 ip-172-31-84-133 systemd: Starting Hostname Service...
+Feb 12 23:18:15 ip-172-31-84-133 dbus[2319]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Feb 12 23:18:15 ip-172-31-84-133 systemd-hostnamed: Changed static host name to 'ip-172-31-84-133.ec2.internal'
+Feb 12 23:18:15 ip-172-31-84-133 systemd-hostnamed: Changed host name to 'ip-172-31-84-133.ec2.internal'
+Feb 12 23:18:15 ip-172-31-84-133 systemd: Started Hostname Service.
+Feb 12 23:18:15 ip-172-31-84-133 systemd: Started Initial cloud-init job (pre-networking).
+Feb 12 23:18:15 ip-172-31-84-133 systemd: Reached target Network (Pre).
+Feb 12 23:18:15 ip-172-31-84-133 systemd: Starting LSB: Bring up/down networking...
+Feb 12 23:18:16 ip-172-31-84-133 network: Bringing up loopback interface:  [  OK  ]
+Feb 12 23:18:16 ip-172-31-84-133 network: Bringing up interface eth0:
+Feb 12 23:18:16 ip-172-31-84-133 dhclient[3691]: DHCPDISCOVER on eth0 to 255.255.255.255 port 67 interval 8 (xid=0x37299fa)
+Feb 12 23:18:16 ip-172-31-84-133 dhclient[3691]: DHCPREQUEST on eth0 to 255.255.255.255 port 67 (xid=0x37299fa)
+Feb 12 23:18:16 ip-172-31-84-133 dhclient[3691]: DHCPOFFER from 172.31.80.1
+Feb 12 23:18:16 ip-172-31-84-133 dhclient[3691]: DHCPACK from 172.31.80.1 (xid=0x37299fa)
+Feb 12 23:18:18 ip-172-31-84-133 NET[3741]: /usr/sbin/dhclient-script : updated /etc/resolv.conf
+Feb 12 23:18:18 ip-172-31-84-133 dhclient[3691]: bound to 172.31.84.133 -- renewal in 1718 seconds.
+Feb 12 23:18:18 ip-172-31-84-133 network: Determining IP information for eth0... done.
+Feb 12 23:18:18 ip-172-31-84-133 network: [  OK  ]
+Feb 12 23:18:18 ip-172-31-84-133 systemd: Started LSB: Bring up/down networking.
+Feb 12 23:18:18 ip-172-31-84-133 systemd: Reached target Network.
+Feb 12 23:18:18 ip-172-31-84-133 systemd: Starting Dynamic System Tuning Daemon...
+Feb 12 23:18:18 ip-172-31-84-133 systemd: Starting Postfix Mail Transport Agent...
+Feb 12 23:18:18 ip-172-31-84-133 systemd: Starting Initial cloud-init job (metadata service crawler)...
+Feb 12 23:18:18 ip-172-31-84-133 systemd: Started Dynamic System Tuning Daemon.
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: Cloud-init v. 18.2 running 'init' at Tue, 12 Feb 2019 23:18:18 +0000. Up 62.09 seconds.
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: +++++++++++++++++++++++++++++++Net device info+++++++++++++++++++++++++++++++
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: +--------+------+---------------+---------------+-------+-------------------+
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: | Device |  Up  |    Address    |      Mask     | Scope |     Hw-Address    |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: +--------+------+---------------+---------------+-------+-------------------+
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: | eth0:  | True | 172.31.84.133 | 255.255.240.0 |   .   | 12:4d:02:3b:2f:5e |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: | eth0:  | True |       .       |       .       |   d   | 12:4d:02:3b:2f:5e |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: |  lo:   | True |   127.0.0.1   |   255.0.0.0   |   .   |         .         |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: |  lo:   | True |       .       |       .       |   d   |         .         |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: +--------+------+---------------+---------------+-------+-------------------+
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: +++++++++++++++++++++++++++++Route IPv4 info+++++++++++++++++++++++++++++
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: +-------+-------------+-------------+---------------+-----------+-------+
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: | Route | Destination |   Gateway   |    Genmask    | Interface | Flags |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: +-------+-------------+-------------+---------------+-----------+-------+
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: |   0   |   0.0.0.0   | 172.31.80.1 |    0.0.0.0    |    eth0   |   UG  |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: |   1   | 169.254.0.0 |   0.0.0.0   |  255.255.0.0  |    eth0   |   U   |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: |   2   | 172.31.80.0 |   0.0.0.0   | 255.255.240.0 |    eth0   |   U   |
+Feb 12 23:18:19 ip-172-31-84-133 cloud-init: ci-info: +-------+-------------+-------------+---------------+-----------+-------+
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Started Postfix Mail Transport Agent.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Started Initial cloud-init job (metadata service crawler).
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Starting Permit User Sessions...
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Starting OpenSSH Server Key Generation...
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Reached target Network is Online.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Starting Crash recovery kernel arming...
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Starting Notify NFS peers of a restart...
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Starting System Logging Service...
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Reached target Cloud-config availability.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Starting Apply the settings specified in cloud-config...
+Feb 12 23:18:19 ip-172-31-84-133 sm-notify[3968]: Version 1.3.0 starting
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Started Permit User Sessions.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Started Command Scheduler.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Started Serial Getty on ttyS0.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Started Getty on tty1.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Reached target Login Prompts.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Started Notify NFS peers of a restart.
+Feb 12 23:18:19 ip-172-31-84-133 kdumpctl: No memory reserved for crash kernel
+Feb 12 23:18:19 ip-172-31-84-133 kdumpctl: Starting kdump: [FAILED]
+Feb 12 23:18:19 ip-172-31-84-133 rsyslogd: [origin software="rsyslogd" swVersion="8.24.0-34.el7" x-pid="3970" x-info="http://www.rsyslog.com"] start
+Feb 12 23:18:19 ip-172-31-84-133 systemd: kdump.service: main process exited, code=exited, status=1/FAILURE
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Failed to start Crash recovery kernel arming.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Unit kdump.service entered failed state.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: kdump.service failed.
+Feb 12 23:18:19 ip-172-31-84-133 systemd: Started System Logging Service.
+Feb 12 23:18:20 ip-172-31-84-133 sshd-keygen: Generating SSH2 RSA host key: [  OK  ]
+Feb 12 23:18:20 ip-172-31-84-133 sshd-keygen: Generating SSH2 ECDSA host key: [  OK  ]
+Feb 12 23:18:20 ip-172-31-84-133 cloud-init: Cloud-init v. 18.2 running 'modules:config' at Tue, 12 Feb 2019 23:18:20 +0000. Up 63.52 seconds.
+Feb 12 23:18:20 ip-172-31-84-133 sshd-keygen: Generating SSH2 ED25519 host key: [  OK  ]
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Started OpenSSH Server Key Generation.
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Starting OpenSSH server daemon...
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Started OpenSSH server daemon.
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Stopping OpenSSH server daemon...
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Stopped OpenSSH server daemon.
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Stopped OpenSSH Server Key Generation.
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Stopping OpenSSH Server Key Generation...
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Starting OpenSSH server daemon...
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Started OpenSSH server daemon.
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Started Apply the settings specified in cloud-config.
+Feb 12 23:18:20 ip-172-31-84-133 systemd: Starting Execute cloud user/final scripts...
+Feb 12 23:18:21 ip-172-31-84-133 cloud-init: Cloud-init v. 18.2 running 'modules:final' at Tue, 12 Feb 2019 23:18:20 +0000. Up 64.09 seconds.
+Feb 12 23:18:21 ip-172-31-84-133 ec2: 
+Feb 12 23:18:21 ip-172-31-84-133 ec2: #############################################################
+Feb 12 23:18:21 ip-172-31-84-133 ec2: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+Feb 12 23:18:21 ip-172-31-84-133 ec2: 256 SHA256:tAkZ+YySdkb6mQ6BzWw1PhhSJ56YxOVwXA6IDPzRxMI no comment (ECDSA)
+Feb 12 23:18:21 ip-172-31-84-133 ec2: 256 SHA256:/8Ca30ce+clInIVstoKYz0ak6TIbnTKB4z1U8Eqa1Ek no comment (ED25519)
+Feb 12 23:18:21 ip-172-31-84-133 ec2: 2048 SHA256:tyFr76AbBGSrLdsaeFQpI260+AB/zVVwMkqMKOv+YWE no comment (RSA)
+Feb 12 23:18:21 ip-172-31-84-133 ec2: -----END SSH HOST KEY FINGERPRINTS-----
+Feb 12 23:18:21 ip-172-31-84-133 ec2: #############################################################
+Feb 12 23:18:21 ip-172-31-84-133 cloud-init: Cloud-init v. 18.2 finished at Tue, 12 Feb 2019 23:18:21 +0000. Datasource DataSourceEc2Local.  Up 64.29 seconds
+Feb 12 23:18:21 ip-172-31-84-133 systemd: Started Execute cloud user/final scripts.
+Feb 12 23:18:21 ip-172-31-84-133 systemd: Reached target Multi-User System.
+Feb 12 23:18:21 ip-172-31-84-133 systemd: Starting Update UTMP about System Runlevel Changes...
+Feb 12 23:18:21 ip-172-31-84-133 systemd: Started Update UTMP about System Runlevel Changes.
+Feb 12 23:18:21 ip-172-31-84-133 systemd: Startup finished in 1.651s (kernel) + 2.557s (initrd) + 1min 140ms (userspace) = 1min 4.349s.
+Feb 12 23:19:17 ip-172-31-84-133 chronyd[2469]: Selected source 68.183.107.237
+Feb 12 23:25:40 ip-172-31-84-133 systemd: Created slice User Slice of centos.
+Feb 12 23:25:40 ip-172-31-84-133 systemd: Started Session 1 of user centos.
+Feb 12 23:25:40 ip-172-31-84-133 systemd-logind: New session 1 of user centos.
+Feb 12 23:26:12 ip-172-31-84-133 su: (to root) centos on pts/0
+Feb 12 23:27:14 ip-172-31-84-133 yum[4090]: Updated: glibc-common-2.17-260.el7_6.3.x86_64
+Feb 12 23:27:15 ip-172-31-84-133 systemd: Stopping Command Scheduler...
+Feb 12 23:27:15 ip-172-31-84-133 systemd: Stopped Command Scheduler.
+Feb 12 23:27:15 ip-172-31-84-133 systemd: Started Command Scheduler.
+Feb 12 23:27:15 ip-172-31-84-133 yum[4090]: Updated: glibc-2.17-260.el7_6.3.x86_64
+Feb 12 23:27:15 ip-172-31-84-133 yum[4090]: Updated: 1:grub2-common-2.02-0.76.el7.centos.1.noarch
+Feb 12 23:27:15 ip-172-31-84-133 yum[4090]: Updated: nss-util-3.36.0-1.1.el7_6.x86_64
+Feb 12 23:27:16 ip-172-31-84-133 yum[4090]: Updated: policycoreutils-2.5-29.el7_6.1.x86_64
+Feb 12 23:27:16 ip-172-31-84-133 yum[4090]: Updated: systemd-libs-219-62.el7_6.3.x86_64
+Feb 12 23:27:16 ip-172-31-84-133 systemd: Closed udev Control Socket.
+Feb 12 23:27:16 ip-172-31-84-133 systemd: Closed udev Kernel Socket.
+Feb 12 23:27:16 ip-172-31-84-133 systemd: Stopping udev Kernel Device Manager...
+Feb 12 23:27:16 ip-172-31-84-133 systemd: Stopped udev Kernel Device Manager.
+Feb 12 23:27:16 ip-172-31-84-133 dbus[2319]: [system] Reloaded configuration
+Feb 12 23:27:17 ip-172-31-84-133 dbus[2319]: [system] Reloaded configuration
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Reexecuting.
+Feb 12 23:27:17 ip-172-31-84-133 systemd: systemd 219 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 -SECCOMP +BLKID +ELFUTILS +KMOD +IDN)
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Detected virtualization xen.
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Detected architecture x86-64.
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Unset automount Arbitrary Executable File Formats File System Automount Point.
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Stopping Arbitrary Executable File Formats File System Automount Point.
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Listening on udev Control Socket.
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Listening on udev Kernel Socket.
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Starting udev Kernel Device Manager...
+Feb 12 23:27:17 ip-172-31-84-133 systemd-udevd: starting version 219
+Feb 12 23:27:17 ip-172-31-84-133 systemd: Started udev Kernel Device Manager.
+Feb 12 23:27:18 ip-172-31-84-133 yum[4090]: Updated: systemd-219-62.el7_6.3.x86_64
+Feb 12 23:27:18 ip-172-31-84-133 yum[4090]: Updated: 7:device-mapper-libs-1.02.149-10.el7_6.3.x86_64
+Feb 12 23:27:18 ip-172-31-84-133 yum[4090]: Updated: 7:device-mapper-1.02.149-10.el7_6.3.x86_64
+Feb 12 23:27:18 ip-172-31-84-133 yum[4090]: Updated: 1:grub2-tools-minimal-2.02-0.76.el7.centos.1.x86_64
+Feb 12 23:27:18 ip-172-31-84-133 yum[4090]: Updated: 1:grub2-tools-2.02-0.76.el7.centos.1.x86_64
+Feb 12 23:27:28 ip-172-31-84-133 yum[4090]: Updated: selinux-policy-3.13.1-229.el7_6.9.noarch
+Feb 12 23:27:28 ip-172-31-84-133 yum[4090]: Updated: nss-3.36.0-7.1.el7_6.x86_64
+Feb 12 23:27:28 ip-172-31-84-133 yum[4090]: Updated: nss-sysinit-3.36.0-7.1.el7_6.x86_64
+Feb 12 23:27:28 ip-172-31-84-133 yum[4090]: Updated: nss-tools-3.36.0-7.1.el7_6.x86_64
+Feb 12 23:27:29 ip-172-31-84-133 yum[4090]: Updated: 1:grub2-pc-modules-2.02-0.76.el7.centos.1.noarch
+Feb 12 23:27:29 ip-172-31-84-133 yum[4090]: Updated: krb5-libs-1.15.1-37.el7_6.x86_64
+Feb 12 23:27:29 ip-172-31-84-133 yum[4090]: Updated: kernel-tools-libs-3.10.0-957.5.1.el7.x86_64
+Feb 12 23:27:29 ip-172-31-84-133 yum[4090]: Updated: freetype-2.8-12.el7_6.1.x86_64
+Feb 12 23:27:29 ip-172-31-84-133 yum[4090]: Updated: 1:grub2-tools-extra-2.02-0.76.el7.centos.1.x86_64
+Feb 12 23:27:29 ip-172-31-84-133 yum[4090]: Updated: 1:grub2-pc-2.02-0.76.el7.centos.1.x86_64
+Feb 12 23:27:29 ip-172-31-84-133 yum[4090]: Updated: 32:bind-license-9.9.4-73.el7_6.noarch
+Feb 12 23:27:37 ip-172-31-84-133 yum[4090]: Installed: linux-firmware-20180911-69.git85c5d90.el7.noarch
+Feb 12 23:27:42 ip-172-31-84-133 yum[4090]: Installed: kernel-3.10.0-957.5.1.el7.x86_64
+Feb 12 23:27:42 ip-172-31-84-133 yum[4090]: Updated: 32:bind-libs-lite-9.9.4-73.el7_6.x86_64
+Feb 12 23:27:42 ip-172-31-84-133 yum[4090]: Updated: 1:grub2-2.02-0.76.el7.centos.1.x86_64
+Feb 12 23:27:43 ip-172-31-84-133 yum[4090]: Updated: kernel-tools-3.10.0-957.5.1.el7.x86_64
+Feb 12 23:27:43 ip-172-31-84-133 yum[4090]: Updated: openldap-2.4.44-21.el7_6.x86_64
+Feb 12 23:27:53 ip-172-31-84-133 kernel: SELinux:  Class bpf not defined in policy.
+Feb 12 23:27:53 ip-172-31-84-133 kernel: SELinux: the above unknown classes and permissions will be allowed
+Feb 12 23:27:55 ip-172-31-84-133 dbus[2319]: [system] Reloaded configuration
+Feb 12 23:27:56 ip-172-31-84-133 yum[4090]: Updated: selinux-policy-targeted-3.13.1-229.el7_6.9.noarch
+Feb 12 23:27:56 ip-172-31-84-133 yum[4090]: Updated: systemd-sysv-219-62.el7_6.3.x86_64
+Feb 12 23:27:56 ip-172-31-84-133 dbus[2319]: [system] Reloaded configuration
+Feb 12 23:27:56 ip-172-31-84-133 yum[4090]: Updated: policycoreutils-python-2.5-29.el7_6.1.x86_64
+Feb 12 23:27:56 ip-172-31-84-133 yum[4090]: Updated: python-perf-3.10.0-957.5.1.el7.x86_64
+Feb 12 23:27:57 ip-172-31-84-133 systemd: Reloading.
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut-033-554.el7
+Feb 12 23:28:05 ip-172-31-84-133 dracut: Executing: /sbin/dracut -f /boot/initramfs-3.10.0-957.5.1.el7.x86_64.img 3.10.0-957.5.1.el7.x86_64
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'busybox' will not be installed, because command 'busybox' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'plymouth' will not be installed, because command 'plymouthd' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'plymouth' will not be installed, because command 'plymouth' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'crypt' will not be installed, because command 'cryptsetup' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'lvm' will not be installed, because command 'lvm' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'mdraid' will not be installed, because command 'mdadm' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'multipath' will not be installed, because command 'multipath' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'cifs' will not be installed, because command 'mount.cifs' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'fcoe' will not be installed, because command 'dcbtool' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'fcoe' will not be installed, because command 'fipvlan' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'fcoe' will not be installed, because command 'lldpad' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'fcoe' will not be installed, because command 'fcoemon' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'fcoe' will not be installed, because command 'fcoeadm' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'fcoe-uefi' will not be installed, because command 'dcbtool' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'fcoe-uefi' will not be installed, because command 'fipvlan' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'fcoe-uefi' will not be installed, because command 'lldpad' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'iscsi' will not be installed, because command 'iscsistart' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'iscsi' will not be installed, because command 'iscsi-iname' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'nbd' will not be installed, because command 'nbd-client' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: dracut module 'biosdevname' will not be installed, because command 'biosdevname' could not be found!
+Feb 12 23:28:05 ip-172-31-84-133 dracut: *** Including module: bash ***
+Feb 12 23:28:05 ip-172-31-84-133 dracut: *** Including module: modsign ***
+Feb 12 23:28:05 ip-172-31-84-133 dracut: *** Including module: nss-softokn ***
+Feb 12 23:28:05 ip-172-31-84-133 dracut: *** Including module: i18n ***
+Feb 12 23:28:06 ip-172-31-84-133 dracut: *** Including module: network ***
+Feb 12 23:28:07 ip-172-31-84-133 dracut: *** Including module: ifcfg ***
+Feb 12 23:28:07 ip-172-31-84-133 dracut: *** Including module: btrfs ***
+Feb 12 23:28:07 ip-172-31-84-133 dracut: *** Including module: kernel-modules ***
+Feb 12 23:28:57 ip-172-31-84-133 dracut: *** Including module: nfs ***
+Feb 12 23:28:59 ip-172-31-84-133 dracut: *** Including module: resume ***
+Feb 12 23:28:59 ip-172-31-84-133 dracut: *** Including module: rootfs-block ***
+Feb 12 23:28:59 ip-172-31-84-133 dracut: *** Including module: terminfo ***
+Feb 12 23:28:59 ip-172-31-84-133 dracut: *** Including module: udev-rules ***
+Feb 12 23:29:00 ip-172-31-84-133 dracut: Skipping udev rule: 40-redhat-cpu-hotplug.rules
+Feb 12 23:29:02 ip-172-31-84-133 dracut: Skipping udev rule: 91-permissions.rules
+Feb 12 23:29:03 ip-172-31-84-133 dracut: *** Including module: systemd ***
+Feb 12 23:29:05 ip-172-31-84-133 dracut: *** Including module: usrmount ***
+Feb 12 23:29:05 ip-172-31-84-133 dracut: *** Including module: base ***
+Feb 12 23:29:06 ip-172-31-84-133 dracut: *** Including module: fs-lib ***
+Feb 12 23:29:06 ip-172-31-84-133 dracut: *** Including module: microcode_ctl-fw_dir_override ***
+Feb 12 23:29:06 ip-172-31-84-133 dracut:  microcode_ctl module: mangling fw_dir
+Feb 12 23:29:06 ip-172-31-84-133 dracut:    microcode_ctl: reset fw_dir to "/lib/firmware/updates /lib/firmware"
+Feb 12 23:29:06 ip-172-31-84-133 dracut:    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel"...
+Feb 12 23:29:07 ip-172-31-84-133 dracut:      microcode_ctl: intel: caveats check for kernel version "3.10.0-957.5.1.el7.x86_64" passed, adding "/usr/share/microcode_ctl/ucode_with_caveats/intel" to fw_dir variable
+Feb 12 23:29:07 ip-172-31-84-133 dracut:    microcode_ctl: processing data directory  "/usr/share/microcode_ctl/ucode_with_caveats/intel-06-4f-01"...
+Feb 12 23:29:07 ip-172-31-84-133 dracut:    microcode_ctl: kernel version "3.10.0-957.5.1.el7.x86_64" failed early load check for "intel-06-4f-01", skipping
+Feb 12 23:29:07 ip-172-31-84-133 dracut:    microcode_ctl: final fw_dir: "/usr/share/microcode_ctl/ucode_with_caveats/intel /lib/firmware/updates /lib/firmware"
+Feb 12 23:29:07 ip-172-31-84-133 dracut: *** Including module: shutdown ***
+Feb 12 23:29:07 ip-172-31-84-133 dracut: *** Including modules done ***
+Feb 12 23:29:07 ip-172-31-84-133 dracut: *** Installing kernel module dependencies and firmware ***
+Feb 12 23:29:41 ip-172-31-84-133 dracut: *** Installing kernel module dependencies and firmware done ***
+Feb 12 23:29:41 ip-172-31-84-133 dracut: *** Resolving executable dependencies ***
+Feb 12 23:29:51 ip-172-31-84-133 dracut: *** Resolving executable dependencies done***
+Feb 12 23:29:51 ip-172-31-84-133 dracut: *** Hardlinking files ***
+Feb 12 23:29:51 ip-172-31-84-133 dracut: *** Hardlinking files done ***
+Feb 12 23:29:51 ip-172-31-84-133 dracut: *** Stripping files ***
+Feb 12 23:29:53 ip-172-31-84-133 dracut: *** Stripping files done ***
+Feb 12 23:29:53 ip-172-31-84-133 dracut: *** Generating early-microcode cpio image contents ***
+Feb 12 23:29:53 ip-172-31-84-133 dracut: *** Constructing AuthenticAMD.bin ****
+Feb 12 23:29:53 ip-172-31-84-133 dracut: *** Constructing GenuineIntel.bin ****
+Feb 12 23:29:54 ip-172-31-84-133 dracut: *** Constructing GenuineIntel.bin ****
+Feb 12 23:29:54 ip-172-31-84-133 dracut: *** Store current command line parameters ***
+Feb 12 23:29:54 ip-172-31-84-133 dracut: *** Creating image file ***
+Feb 12 23:29:54 ip-172-31-84-133 dracut: *** Creating microcode section ***
+Feb 12 23:29:54 ip-172-31-84-133 dracut: *** Created microcode section ***
+Feb 12 23:30:22 ip-172-31-84-133 dracut: *** Creating image file done ***
+Feb 12 23:30:44 ip-172-31-84-133 dracut: *** Creating initramfs image file '/boot/initramfs-3.10.0-957.5.1.el7.x86_64.img' done ***
+Feb 12 23:31:18 ip-172-31-84-133 yum[17647]: Installed: apr-1.4.8-3.el7_4.1.x86_64
+Feb 12 23:31:18 ip-172-31-84-133 yum[17647]: Installed: apr-util-1.5.2-6.el7.x86_64
+Feb 12 23:31:18 ip-172-31-84-133 yum[17647]: Installed: httpd-tools-2.4.6-88.el7.centos.x86_64
+Feb 12 23:31:26 ip-172-31-84-133 yum[17647]: Installed: centos-logos-70.0.6-3.el7.centos.noarch
+Feb 12 23:31:27 ip-172-31-84-133 yum[17647]: Installed: mailcap-2.1.41-2.el7.noarch
+Feb 12 23:31:35 ip-172-31-84-133 systemd: Reloading.
+Feb 12 23:31:35 ip-172-31-84-133 yum[17647]: Installed: httpd-2.4.6-88.el7.centos.x86_64
+Feb 12 23:31:48 ip-172-31-84-133 systemd: Starting The Apache HTTP Server...
+Feb 12 23:31:49 ip-172-31-84-133 systemd: Started The Apache HTTP Server.
+Feb 12 23:32:01 ip-172-31-84-133 systemd: Reloading.
+Feb 12 23:32:18 ip-172-31-84-133 systemd: Starting Cleanup of Temporary Directories...
+Feb 12 23:32:18 ip-172-31-84-133 systemd: Started Cleanup of Temporary Directories.
+Feb 12 23:32:59 ip-172-31-84-133 yum[17725]: Installed: 1:perl-parent-0.225-244.el7.noarch
+Feb 12 23:32:59 ip-172-31-84-133 yum[17725]: Installed: perl-HTTP-Tiny-0.033-3.el7.noarch
+Feb 12 23:32:59 ip-172-31-84-133 yum[17725]: Installed: perl-podlators-2.5.1-3.el7.noarch
+Feb 12 23:33:00 ip-172-31-84-133 yum[17725]: Installed: perl-Pod-Perldoc-3.20-4.el7.noarch
+Feb 12 23:33:00 ip-172-31-84-133 yum[17725]: Installed: 1:perl-Pod-Escapes-1.04-294.el7_6.noarch
+Feb 12 23:33:00 ip-172-31-84-133 yum[17725]: Installed: perl-Text-ParseWords-3.29-4.el7.noarch
+Feb 12 23:33:03 ip-172-31-84-133 yum[17725]: Installed: perl-Encode-2.51-7.el7.x86_64
+Feb 12 23:33:04 ip-172-31-84-133 yum[17725]: Installed: perl-Pod-Usage-1.63-3.el7.noarch
+Feb 12 23:33:05 ip-172-31-84-133 yum[17725]: Installed: 4:perl-libs-5.16.3-294.el7_6.x86_64
+Feb 12 23:33:05 ip-172-31-84-133 yum[17725]: Installed: 4:perl-macros-5.16.3-294.el7_6.x86_64
+Feb 12 23:33:05 ip-172-31-84-133 yum[17725]: Installed: perl-Storable-2.45-3.el7.x86_64
+Feb 12 23:33:05 ip-172-31-84-133 yum[17725]: Installed: perl-Exporter-5.68-3.el7.noarch
+Feb 12 23:33:05 ip-172-31-84-133 yum[17725]: Installed: perl-constant-1.27-2.el7.noarch
+Feb 12 23:33:05 ip-172-31-84-133 yum[17725]: Installed: perl-Time-Local-1.2300-2.el7.noarch
+Feb 12 23:33:05 ip-172-31-84-133 yum[17725]: Installed: perl-Socket-2.010-4.el7.x86_64
+Feb 12 23:33:05 ip-172-31-84-133 yum[17725]: Installed: perl-Carp-1.26-244.el7.noarch
+Feb 12 23:33:06 ip-172-31-84-133 yum[17725]: Installed: 4:perl-Time-HiRes-1.9725-3.el7.x86_64
+Feb 12 23:33:06 ip-172-31-84-133 yum[17725]: Installed: perl-PathTools-3.40-5.el7.x86_64
+Feb 12 23:33:06 ip-172-31-84-133 yum[17725]: Installed: perl-Scalar-List-Utils-1.27-248.el7.x86_64
+Feb 12 23:33:06 ip-172-31-84-133 yum[17725]: Installed: perl-File-Temp-0.23.01-3.el7.noarch
+Feb 12 23:33:06 ip-172-31-84-133 yum[17725]: Installed: perl-File-Path-2.09-2.el7.noarch
+Feb 12 23:33:06 ip-172-31-84-133 yum[17725]: Installed: perl-threads-shared-1.43-6.el7.x86_64
+Feb 12 23:33:07 ip-172-31-84-133 yum[17725]: Installed: perl-threads-1.87-4.el7.x86_64
+Feb 12 23:33:07 ip-172-31-84-133 yum[17725]: Installed: perl-Filter-1.49-3.el7.x86_64
+Feb 12 23:33:08 ip-172-31-84-133 yum[17725]: Installed: 1:perl-Pod-Simple-3.28-4.el7.noarch
+Feb 12 23:33:08 ip-172-31-84-133 yum[17725]: Installed: perl-Getopt-Long-2.40-3.el7.noarch
+Feb 12 23:33:30 ip-172-31-84-133 yum[17725]: Installed: 4:perl-5.16.3-294.el7_6.x86_64
+Feb 12 23:33:31 ip-172-31-84-133 yum[17725]: Installed: perl-Data-Dumper-2.145-3.el7.x86_64
+Feb 12 23:33:31 ip-172-31-84-133 yum[17725]: Installed: perl-Compress-Raw-Bzip2-2.061-3.el7.x86_64
+Feb 12 23:33:31 ip-172-31-84-133 yum[17725]: Installed: perl-Net-Daemon-0.48-5.el7.noarch
+Feb 12 23:33:31 ip-172-31-84-133 yum[17725]: Installed: 1:perl-Compress-Raw-Zlib-2.061-4.el7.x86_64
+Feb 12 23:33:32 ip-172-31-84-133 yum[17725]: Installed: perl-IO-Compress-2.061-2.el7.noarch
+Feb 12 23:33:32 ip-172-31-84-133 yum[17725]: Installed: perl-PlRPC-0.2020-14.el7.noarch
+Feb 12 23:33:34 ip-172-31-84-133 yum[17725]: Installed: perl-DBI-1.627-4.el7.x86_64
+Feb 12 23:33:34 ip-172-31-84-133 yum[17725]: Installed: perl-DBD-MySQL-4.023-6.el7.x86_64
+Feb 12 23:33:52 ip-172-31-84-133 yum[17725]: Installed: 1:mariadb-5.5.60-1.el7_5.x86_64
+Feb 12 23:33:52 ip-172-31-84-133 yum[17725]: Installed: libaio-0.3.109-13.el7.x86_64
+Feb 12 23:34:14 ip-172-31-84-133 systemd: Reloading.
+Feb 12 23:34:15 ip-172-31-84-133 yum[17725]: Installed: 1:mariadb-server-5.5.60-1.el7_5.x86_64
+Feb 12 23:34:30 ip-172-31-84-133 systemd: Starting MariaDB database server...
+Feb 12 23:34:31 ip-172-31-84-133 mariadb-prepare-db-dir: Initializing MariaDB database
+Feb 12 23:34:32 ip-172-31-84-133 mariadb-prepare-db-dir: 190212 23:34:32 [Note] /usr/libexec/mysqld (mysqld 5.5.60-MariaDB) starting as process 17843 ...
+Feb 12 23:34:33 ip-172-31-84-133 mariadb-prepare-db-dir: 190212 23:34:33 [Note] /usr/libexec/mysqld (mysqld 5.5.60-MariaDB) starting as process 17852 ...
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: PLEASE REMEMBER TO SET A PASSWORD FOR THE MariaDB root USER !
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: To do so, start the server, then issue the following commands:
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: '/usr/bin/mysqladmin' -u root password 'new-password'
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: '/usr/bin/mysqladmin' -u root -h ip-172-31-84-133.ec2.internal password 'new-password'
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: Alternatively you can run:
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: '/usr/bin/mysql_secure_installation'
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: which will also give you the option of removing the test
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: databases and anonymous user created by default.  This is
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: strongly recommended for production servers.
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: See the MariaDB Knowledgebase at http://mariadb.com/kb or the
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: MySQL manual for more instructions.
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: Please report any problems at http://mariadb.org/jira
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: The latest information about MariaDB is available at http://mariadb.org/.
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: You can find additional information about the MySQL part at:
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: http://dev.mysql.com
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: Consider joining MariaDB's strong and vibrant community:
+Feb 12 23:34:34 ip-172-31-84-133 mariadb-prepare-db-dir: https://mariadb.org/get-involved/
+Feb 12 23:34:35 ip-172-31-84-133 mysqld_safe: 190212 23:34:35 mysqld_safe Logging to '/var/log/mariadb/mariadb.log'.
+Feb 12 23:34:35 ip-172-31-84-133 mysqld_safe: 190212 23:34:35 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
+Feb 12 23:34:38 ip-172-31-84-133 systemd: Started MariaDB database server.
+Feb 12 23:34:48 ip-172-31-84-133 systemd: Reloading.
+Feb 12 23:35:20 ip-172-31-84-133 yum[18081]: Installed: libjpeg-turbo-1.2.90-6.el7.x86_64
+Feb 12 23:35:20 ip-172-31-84-133 yum[18081]: Installed: libX11-common-1.6.5-2.el7.noarch
+Feb 12 23:35:20 ip-172-31-84-133 yum[18081]: Installed: libzip-0.10.1-8.el7.x86_64
+Feb 12 23:35:20 ip-172-31-84-133 yum[18081]: Installed: php-common-5.4.16-46.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: php-cli-5.4.16-46.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: php-pdo-5.4.16-46.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: libXau-1.0.8-2.1.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: libxcb-1.13-1.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: libX11-1.6.5-2.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: libXpm-3.5.12-1.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: t1lib-5.1.2-14.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: php-gd-5.4.16-46.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: php-mysql-5.4.16-46.el7.x86_64
+Feb 12 23:35:21 ip-172-31-84-133 yum[18081]: Installed: php-5.4.16-46.el7.x86_64
+Feb 12 23:38:28 ip-172-31-84-133 yum[18119]: Installed: wget-1.14-18.el7.x86_64
+Feb 12 23:38:28 ip-172-31-84-133 yum[18119]: Installed: unzip-6.0-19.el7.x86_64
+Feb 12 23:46:56 ip-172-31-84-133 dhclient[3748]: DHCPREQUEST on eth0 to 172.31.80.1 port 67 (xid=0x37299fa)
+Feb 12 23:46:56 ip-172-31-84-133 dhclient[3748]: DHCPACK from 172.31.80.1 (xid=0x37299fa)
+Feb 12 23:46:58 ip-172-31-84-133 dhclient[3748]: bound to 172.31.84.133 -- renewal in 1368 seconds.
+Feb 12 23:50:16 ip-172-31-84-133 systemd: Started Session 2 of user centos.
+Feb 12 23:50:16 ip-172-31-84-133 systemd-logind: New session 2 of user centos.
+Feb 12 23:51:17 ip-172-31-84-133 systemd: Stopping The Apache HTTP Server...
+Feb 12 23:51:18 ip-172-31-84-133 systemd: Stopped The Apache HTTP Server.
+Feb 12 23:51:25 ip-172-31-84-133 systemd: Starting The Apache HTTP Server...
+Feb 12 23:51:25 ip-172-31-84-133 systemd: Started The Apache HTTP Server.
+Feb 13 00:01:01 ip-172-31-84-133 systemd: Created slice User Slice of root.
+Feb 13 00:01:01 ip-172-31-84-133 systemd: Started Session 3 of user root.
+Feb 13 00:05:04 ip-172-31-84-133 systemd: Stopping The Apache HTTP Server...
+Feb 13 00:05:05 ip-172-31-84-133 systemd: Stopped The Apache HTTP Server.
+Feb 13 00:05:15 ip-172-31-84-133 systemd: Starting The Apache HTTP Server...
+Feb 13 00:05:16 ip-172-31-84-133 systemd: Started The Apache HTTP Server.
+Feb 13 00:08:10 ip-172-31-84-133 dbus[2319]: [system] Reloaded configuration
+Feb 13 00:08:25 ip-172-31-84-133 systemd: Stopping The Apache HTTP Server...
+Feb 13 00:08:26 ip-172-31-84-133 systemd: Stopped The Apache HTTP Server.
+Feb 13 00:08:39 ip-172-31-84-133 systemd: Starting The Apache HTTP Server...
+Feb 13 00:08:39 ip-172-31-84-133 systemd: Started The Apache HTTP Server.
+Feb 13 00:09:46 ip-172-31-84-133 dhclient[3748]: DHCPREQUEST on eth0 to 172.31.80.1 port 67 (xid=0x37299fa)
+Feb 13 00:09:46 ip-172-31-84-133 dhclient[3748]: DHCPACK from 172.31.80.1 (xid=0x37299fa)
+Feb 13 00:09:48 ip-172-31-84-133 dhclient[3748]: bound to 172.31.84.133 -- renewal in 1709 seconds.
+Feb 13 00:31:08 ip-172-31-84-133 yum[18374]: Installed: 1:perl-Error-0.17020-2.el7.noarch
+Feb 13 00:31:08 ip-172-31-84-133 yum[18374]: Installed: perl-TermReadKey-2.30-20.el7.x86_64
+Feb 13 00:31:10 ip-172-31-84-133 yum[18374]: Installed: git-1.8.3.1-20.el7.x86_64
+Feb 13 00:31:10 ip-172-31-84-133 yum[18374]: Installed: perl-Git-1.8.3.1-20.el7.noarch
+Feb 13 00:34:12 ip-172-31-84-133 systemd: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 18396 (git)
+Feb 13 00:34:12 ip-172-31-84-133 systemd: Mounting Arbitrary Executable File Formats File System...
+Feb 13 00:34:12 ip-172-31-84-133 systemd: Mounted Arbitrary Executable File Formats File System.
+Feb 13 00:34:23 ip-172-31-84-133 kernel: Bits 55-60 of /proc/PID/pagemap entries are about to stop being page-shift some time soon. See the linux/Documentation/vm/pagemap.txt for details.

@@ -1,0 +1,7 @@
+Feb 12 23:18:19 ip-172-31-84-133 postfix/postfix-script[3917]: starting the Postfix mail system
+Feb 12 23:18:19 ip-172-31-84-133 postfix/master[3919]: daemon started -- version 2.10.1, configuration /etc/postfix
+Feb 12 23:58:48 ip-172-31-84-133 postfix/pickup[3920]: 3E4A547BDE4: uid=48 from=<apache>
+Feb 12 23:58:48 ip-172-31-84-133 postfix/cleanup[18224]: 3E4A547BDE4: message-id=<f64250a6c8148691eed6c48af27ba386@ec2-52-91-211-198.compute-1.amazonaws.com>
+Feb 12 23:58:48 ip-172-31-84-133 postfix/qmgr[3921]: 3E4A547BDE4: from=<apache@ip-172-31-84-133.ec2.internal>, size=1883, nrcpt=1 (queue active)
+Feb 12 23:58:49 ip-172-31-84-133 postfix/smtp[18226]: 3E4A547BDE4: to=<mgobelli@taos.com>, relay=taos-com.mail.protection.outlook.com[104.47.40.36]:25, delay=1.3, delays=0.05/0.03/0.29/0.94, dsn=2.6.0, status=sent (250 2.6.0 <f64250a6c8148691eed6c48af27ba386@ec2-52-91-211-198.compute-1.amazonaws.com> [InternalId=532575949451, Hostname=DM5PR1601MB1225.namprd16.prod.outlook.com] 10054 bytes in 0.193, 50.776 KB/sec Queued mail for delivery)
+Feb 12 23:58:49 ip-172-31-84-133 postfix/qmgr[3921]: 3E4A547BDE4: removed

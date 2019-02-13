@@ -1,0 +1,19 @@
+364:056c7935f4b1a926930fbdbe230686bb0fae7a7e
+0
+1
+installed:366:6ba326d739d2fb8b40e4765c4d6b38842db36792
+2
+mbr: unzip,x86_64,0,6.0,19.el7 70
+  repo: base
+  ts_state: u
+  output_state: 20
+  isDep: False
+  reason: user
+  reinstall: False
+mbr: wget,x86_64,0,1.14,18.el7 70
+  repo: base
+  ts_state: u
+  output_state: 20
+  isDep: False
+  reason: user
+  reinstall: False

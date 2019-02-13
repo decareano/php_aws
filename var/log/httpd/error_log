@@ -1,0 +1,29 @@
+[Tue Feb 12 23:31:49.067106 2019] [core:notice] [pid 17697] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Feb 12 23:31:49.068083 2019] [suexec:notice] [pid 17697] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Feb 12 23:31:49.193182 2019] [auth_digest:notice] [pid 17697] AH01757: generating secret for digest authentication ...
+[Tue Feb 12 23:31:49.194139 2019] [lbmethod_heartbeat:notice] [pid 17697] AH02282: No slotmem from mod_heartmonitor
+[Tue Feb 12 23:31:49.316157 2019] [mpm_prefork:notice] [pid 17697] AH00163: Apache/2.4.6 (CentOS) configured -- resuming normal operations
+[Tue Feb 12 23:31:49.316184 2019] [core:notice] [pid 17697] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Feb 12 23:41:04.424605 2019] [autoindex:error] [pid 17698] [client 66.236.182.202:55254] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 12 23:51:17.321340 2019] [mpm_prefork:notice] [pid 17697] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 12 23:51:25.370880 2019] [core:notice] [pid 18201] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Tue Feb 12 23:51:25.371669 2019] [suexec:notice] [pid 18201] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Feb 12 23:51:25.393620 2019] [auth_digest:notice] [pid 18201] AH01757: generating secret for digest authentication ...
+[Tue Feb 12 23:51:25.394498 2019] [lbmethod_heartbeat:notice] [pid 18201] AH02282: No slotmem from mod_heartmonitor
+[Tue Feb 12 23:51:25.423602 2019] [mpm_prefork:notice] [pid 18201] AH00163: Apache/2.4.6 (CentOS) PHP/5.4.16 configured -- resuming normal operations
+[Tue Feb 12 23:51:25.423628 2019] [core:notice] [pid 18201] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Feb 13 00:05:04.643667 2019] [mpm_prefork:notice] [pid 18201] AH00170: caught SIGWINCH, shutting down gracefully
+[Wed Feb 13 00:05:16.012864 2019] [core:notice] [pid 18274] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Wed Feb 13 00:05:16.013613 2019] [suexec:notice] [pid 18274] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Feb 13 00:05:16.035984 2019] [auth_digest:notice] [pid 18274] AH01757: generating secret for digest authentication ...
+[Wed Feb 13 00:05:16.036840 2019] [lbmethod_heartbeat:notice] [pid 18274] AH02282: No slotmem from mod_heartmonitor
+[Wed Feb 13 00:05:16.056483 2019] [mpm_prefork:notice] [pid 18274] AH00163: Apache/2.4.6 (CentOS) PHP/5.4.16 configured -- resuming normal operations
+[Wed Feb 13 00:05:16.056515 2019] [core:notice] [pid 18274] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Feb 13 00:08:25.782204 2019] [mpm_prefork:notice] [pid 18274] AH00170: caught SIGWINCH, shutting down gracefully
+[Wed Feb 13 00:08:39.688168 2019] [core:notice] [pid 18325] SELinux policy enabled; httpd running as context system_u:system_r:httpd_t:s0
+[Wed Feb 13 00:08:39.688992 2019] [suexec:notice] [pid 18325] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Feb 13 00:08:39.713479 2019] [auth_digest:notice] [pid 18325] AH01757: generating secret for digest authentication ...
+[Wed Feb 13 00:08:39.714222 2019] [lbmethod_heartbeat:notice] [pid 18325] AH02282: No slotmem from mod_heartmonitor
+[Wed Feb 13 00:08:39.730851 2019] [mpm_prefork:notice] [pid 18325] AH00163: Apache/2.4.6 (CentOS) PHP/5.4.16 configured -- resuming normal operations
+[Wed Feb 13 00:08:39.730881 2019] [core:notice] [pid 18325] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Feb 13 00:22:27.092220 2019] [autoindex:error] [pid 18334] [client 177.185.159.95:47732] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html,index.php,index.php) found, and server-generated directory index forbidden by Options directive

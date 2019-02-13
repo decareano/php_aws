@@ -1,0 +1,12 @@
+centos2.zswap.net 0.00410008430481
+mirror.vcu.edu 0.0121819972992
+mirror.cs.uwp.edu 0.0406231880188
+mirror.ash.fastserv.com 0.00749897956848
+mirrors.advancedhosters.com 0.0889208316803
+mirror.vtti.vt.edu 0.0104329586029
+repo1.ash.innoscale.net 0.0838539600372
+repos-va.psychz.net 0.00165414810181
+mirror.genesisadaptive.com 0.054456949234
+mirror.cogentco.com 0.00277900695801
+mirror.cs.vt.edu 0.00785684585571
+www.gtlib.gatech.edu 0.0160541534424

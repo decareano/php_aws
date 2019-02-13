@@ -1,0 +1,14 @@
+Feb 12 23:18:19 ip-172-31-84-133 crond[3977]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 93% if used.)
+Feb 12 23:18:20 ip-172-31-84-133 crond[3977]: (CRON) INFO (running with inotify support)
+Feb 12 23:27:15 ip-172-31-84-133 crond[3977]: (CRON) INFO (Shutting down)
+Feb 12 23:27:15 ip-172-31-84-133 crond[4138]: (CRON) INFO (RANDOM_DELAY will be scaled with factor 12% if used.)
+Feb 12 23:27:15 ip-172-31-84-133 crond[4138]: (CRON) INFO (running with inotify support)
+Feb 12 23:27:15 ip-172-31-84-133 crond[4138]: (CRON) INFO (@reboot jobs will be run at computer's startup.)
+Feb 13 00:01:01 ip-172-31-84-133 CROND[18231]: (root) CMD (run-parts /etc/cron.hourly)
+Feb 13 00:01:01 ip-172-31-84-133 run-parts(/etc/cron.hourly)[18231]: starting 0anacron
+Feb 13 00:01:01 ip-172-31-84-133 anacron[18240]: Anacron started on 2019-02-13
+Feb 13 00:01:01 ip-172-31-84-133 anacron[18240]: Will run job `cron.daily' in 39 min.
+Feb 13 00:01:01 ip-172-31-84-133 anacron[18240]: Will run job `cron.weekly' in 59 min.
+Feb 13 00:01:01 ip-172-31-84-133 anacron[18240]: Will run job `cron.monthly' in 79 min.
+Feb 13 00:01:01 ip-172-31-84-133 anacron[18240]: Jobs will be executed sequentially
+Feb 13 00:01:01 ip-172-31-84-133 run-parts(/etc/cron.hourly)[18242]: finished 0anacron

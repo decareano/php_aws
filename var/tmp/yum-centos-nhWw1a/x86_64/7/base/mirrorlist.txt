@@ -1,0 +1,10 @@
+http://mirror.cs.vt.edu/pub/CentOS/7.6.1810/os/x86_64/
+http://mirror.ash.fastserv.com/centos/7.6.1810/os/x86_64/
+http://mirror.vcu.edu/pub/gnu_linux/centos/7.6.1810/os/x86_64/
+http://repo1.ash.innoscale.net/centos/7.6.1810/os/x86_64/
+http://mirror.cogentco.com/pub/linux/centos/7.6.1810/os/x86_64/
+http://mirrors.advancedhosters.com/centos/7.6.1810/os/x86_64/
+http://centos2.zswap.net/7.6.1810/os/x86_64/
+http://mirror.vtti.vt.edu/centos/7.6.1810/os/x86_64/
+http://repos-va.psychz.net/centos/7.6.1810/os/x86_64/
+http://mirror.cs.uwp.edu/pub/centos/7.6.1810/os/x86_64/
